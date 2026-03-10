@@ -36,13 +36,12 @@ The application is built on modern **Web3** practices and a component-based fron
 ### Blockchain & Smart Contracts
 - **Network:** Ethereum (or compatible EVM networks)
 - **Smart Contracts:** Solidity
-- **Development Environment:** Hardhat
-- **Web3 Integration:** Ethers.js / Web3.js
+- **Web3 Integration:** Wagmi / Viem (or Ethers.js)
 
 ### External Services & Storage
 - **RPC Provider:** Alchemy / Infura
 - **Decentralized Storage:** IPFS (via Pinata)
-- **Wallet Connection:** MetaMask API
+- **Wallet Connection:** Wagmi Connectors / MetaMask API
 
 ---
 
@@ -59,9 +58,31 @@ The application follows a **Decentralized Data Flow** principle, relying on the 
   *(e.g., wallet connection status, loading states, and transaction feedback)*.
 
 - **Asynchronous Operations**
-  Blockchain queries and contract interactions are performed using the `async/await` structure, ensuring the interface remains responsive during block confirmations.
+  Blockchain queries and contract interactions are performed using the `async/await` structure via **Wagmi hooks**, ensuring the interface remains responsive during block confirmations.
 
 - **Event Listening**
   Real-time UI updates are achieved by listening to **Smart Contract Events** *(e.g., ItemListed, ItemBought)* without needing manual page refreshes.
+
+---
+
+## Installation and Setup
+
+The project can be run locally using **Node.js**.
+
+- **Clone the Repository**
+  Downloading the project files to your local machine.
+  *(`git clone https://github.com/mlkyzgt/nft-marketplace.git`)*
+
+- **Install Dependencies**
+  Installing the required packages for the frontend application.
+  *(`npm install` or `yarn install`)*
+
+- **Set Up Environment Variables**
+  Adding necessary API keys and configurations.
+  *(Create a `.env` file based on the provided `.env.example`)*
+
+- **Run the Application**
+  Starting the frontend development server.
+  *(`npm run dev` or `npm start`)*
 
 ---
